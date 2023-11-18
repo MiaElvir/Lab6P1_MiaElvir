@@ -19,8 +19,8 @@ static Random ran = new Random();
         
         while (opcion > 0 && opcion < 3){
             switch (opcion){
+                
                 case 1: 
-                    
                     
                     System.out.println("Ejercicio 1 - Conjuntos");
                     System.out.println(" ");
@@ -59,11 +59,7 @@ static Random ran = new Random();
                             imprimir_char(difference(SET1,SET2)); 
                             break; 
                     }
-                    
-                    
-                    
-                    
-                    
+                    //what kind of music does rabbits listen to? [1]
                     
                     break; 
                     
@@ -72,26 +68,22 @@ static Random ran = new Random();
                     System.out.println("Ejercicio 2 - ¿Cuantos primos tienes?");
                     System.out.println(" ");
                     System.out.print("Ingrese el tamaño del arreglo a generar: ");
-                    int tam = papoy.nextInt(); 
-                    while (tam < 2){
-                        System.out.println("El numero debe ser mayor a 1 \n Vuelva a Ingresarlo: ");
-                        tam = papoy.nextInt(); 
-                    }
+                    int tam = papoy.nextInt();
+                    System.out.println(" ");
                     System.out.print("Ingrese el limite inferior: ");
-                    int lim_1 = papoy.nextInt(); 
+                    int lim_1 = papoy.nextInt();
                     System.out.println(" ");
                     System.out.print("Ingrese el limite superior: ");
-                    int lim_2 = papoy.nextInt(); 
+                    int lim_2 = papoy.nextInt();
                     System.out.println(" ");
-                    
-                    int arreglo_g [] = new int [tam]; 
+
+                    int arreglo_g [] = new int [tam];
                     System.out.print("Arreglo generado: ");
-                    imprimir_int(genRandArray(tam, lim_1, lim_2)); 
-                    int arreglo_1 [] = new int [tam]; 
-                    arreglo_1 = genRandArray(tam, lim_1, lim_2); 
+                    arreglo_g=genRandArray(tam, lim_1, lim_2);
+                    imprimir_int(arreglo_g);
                     System.out.println(" ");
                     System.out.print("No. divisores primos: ");
-                    imprimir_int(getTotalPrimeCount(arreglo_1)); 
+                    imprimir_int(getTotalPrimeCount(arreglo_g));
                     break; 
             
             
@@ -106,7 +98,7 @@ static Random ran = new Random();
         
         }//fin while 
         
-        
+        //[1]-Hip Hop 
         
     }//fin main
     
@@ -183,7 +175,7 @@ static Random ran = new Random();
         
         }
         return x; 
-    }
+    }// fin difference
     
     public static int [] genRandArray(int x, int y, int z){
         int arreglo [] = new int [x]; 
@@ -191,7 +183,7 @@ static Random ran = new Random();
             arreglo[i] = ran.nextInt(y, z);   
         }
         return arreglo; 
-    }
+    }//fin genRandArray
     
     public static boolean isPrime(int x){
         int cont = 0; 
@@ -210,7 +202,7 @@ static Random ran = new Random();
         }
         
         return primo; 
-    }
+    }//isPrime
     
     public static int countPrimeFactors(int x){
         int cont = 0; 
