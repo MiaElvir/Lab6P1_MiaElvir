@@ -155,7 +155,13 @@ static Random ran = new Random();
                 }
             }
         }
-        
+        /*for (int i = 0; i < intersection.length; i++){
+            for (int j = 0; i < intersection.length; i++){
+                if (intersection[i]==intersection[j]){
+                    intersection[j]='/';
+                }
+            }
+        }*/
         
     
         return intersection; 
